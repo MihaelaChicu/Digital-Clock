@@ -2,6 +2,12 @@ const hourEl = document.getElementById("hour");
 const minuteEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 const ampmEl = document.getElementById("ampm");
+const switchButton = document.getElementById("btn");
+let boolValue = false;
+
+function callBool(){
+  boolValue = !boolValue;
+}
 
 function updateClock(){
     let h = new Date().getHours();
@@ -10,8 +16,11 @@ function updateClock(){
     let ampm = "AM";
 
     if(h > 12) {
-        h = h - 12;
         ampm = "PM";
+    }
+
+    if(h > 12 && boolValue) {
+        h = h - 12;
     }
     
     h = h < 10 ? "0" + h : h;
@@ -24,7 +33,12 @@ function updateClock(){
     ampmEl.innerText = ampm;
     setTimeout( ()=>{
      updateClock()
-    }, 1000)
+    }, 10)
+
+    if(onclick)
+    {
+        boolValue =!boolValue;
+    }
 }
 
 updateClock();
