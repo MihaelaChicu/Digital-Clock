@@ -11,6 +11,35 @@ body{
     overflow: hidden;
 }
 
+#btn {
+    background: slateblue;
+    border-radius: 10px;
+    border-color: slateblue;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0, 0.3);
+    padding: 3px 3px 3px 5px;
+    opacity: .8;
+    position:relative;
+    right: 2%;
+    top: 3%;
+    width: 100px;
+    height: 40px;
+
+    
+  }
+  
+  #btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
 h2{
     text-transform: uppercase;
     letter-spacing: 4px;
